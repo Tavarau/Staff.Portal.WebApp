@@ -1,0 +1,152 @@
+﻿
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+
+
+
+#sidebar {
+    width: 180px;
+    position: fixed;
+    top: 0;
+    left: -210px;
+    height: 100vh;
+    z-index: 1500;
+    background: rgba( 54, 69, 79, 0.9);
+    color: rgba(0, 0, 0, 0.3);
+    transition: all 0.3s;
+    overflow-y: auto;
+    overflow-x: auto;
+    /*overflow-x: scroll;*/
+    /*box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);*/
+    border-right: 0.2px solid rgb(57,57,57);
+}
+
+#sidebar .nav-second-level li a {
+  padding-left: 37px;
+}
+#sidebar .nav-third-level li a {
+  padding-left: 52px;
+}
+
+#sidebar.active {
+    left: 0;
+}
+
+#dismiss {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background: rgba(65,74,76,0.97);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#dismiss:hover {
+    background: #fff;
+    color: #7386D5;
+}
+
+.overlay {
+    display: none;
+    position:fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 998;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+.overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+#sidebar .sidebar-header {
+    padding: 7px;
+ 
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+     font-size: 0.9em !important;
+}
+
+#sidebar ul li a:hover {
+    color:rgba(65,74,76,0.97);
+    background: #fff;
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #fff;
+    background:rgba(65,74,76,0.97);
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+#sidebar ul ul  a {
+    font-size: 0.88em !important;
+    padding-left: 30px !important;
+   border-left:2px solid green;
+    color:#ffffff;
+}
+
+#sidebar ul ul ul a {
+    font-size: 0.85em !important;
+    padding-left: 60px !important;
+     border-left:2px solid green;
+    color:#ffffff;
+}
+
+ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+a.download {
+    background: #fff;
+    color: #7386D5;
+}
+
+a.article,
+a.article:hover {
+    background: #6d7fcc !important;
+    color: #fff !important;
+}

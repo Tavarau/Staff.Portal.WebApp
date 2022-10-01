@@ -1,0 +1,73 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+
+
+<div class="text-center">
+    <h3 class="display-4">Welcome to E-Staff Portal</h3>
+</div>
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <p>E-Staff Portal is an online system that allows staff to view and update their personal information.</p>
+                <p>The system will provide real time information and also will have provisions to store historical data. It would be fully user oriented with future options for enhancements.</p>
+            </div>
+        </div>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+
+
+<div class="row">
+    <a asp-area="" asp-page="/StaffsView">
+        <div class="col-lg-2 col-md-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <center>
+                                <i class="fa fa-users fa-2x "></i>
+                            </center>
+                        </div>
+                        <div class="col-xs-12 text-Left">
+                            <center>
+                                <div>Staffs</div>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+    <a asp-area="" asp-page="/StaffsAdminView">
+        <div class="col-lg-2 col-md-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <center>
+                                <i class="glyphicon glyphicon-user fa-2x"></i>
+                            </center>
+                        </div>
+                        <div class="col-xs-12 text-Left">
+                            <center>
+                                <div>Admin Staff</div>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+
+
+</div>
+
+

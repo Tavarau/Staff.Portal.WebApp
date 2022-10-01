@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] | Staff.Portal</title>
+    <link rel="stylesheet" href="~/My/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/My/css/bootstrap-datetimepicker.min.css" />
+    <link rel="stylesheet" href="~/My/css/site.min.css" />
+    <link rel="stylesheet" href="~/My/css/SideBar.min.css" />
+    <link href="~/My/css/font-awesome/css/all.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header>
+        <div class="overlay"></div>
+        <div id="wrapper">
+            <div id="sidebar" role="navigation">
+                <div id="dismiss">
+                    <i class="glyphicon glyphicon-remove"></i>
+                </div>
+                <div class="sidebar-header" style="color:white">
+                    <h4>Welcome!</h4>
+                </div>
+                <ul class="nav" id="side-menu">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-page="/StaffsView"> <i class="fa fa-users"></i> Staffs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-page="/StaffsAdminView"> <i class="glyphicon glyphicon-user"></i> Admin Staff</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="sidebar" role="navigation">
+                <div id="dismiss">
+                    <i class="glyphicon glyphicon-remove"></i>
+                </div>
+            </div>
+            <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0;">
+                <ul class="nav  navbar-left">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" id="sidebarCollapse" href="#">
+                            <i class="fa fa-th fa-fw"></i>
+                        </a>
+                    </li>
+                </ul>
+                <div class="navbar-header" style="margin-top: 4px">
+                    <a style="margin-left: 13px" asp-page="/Index">
+                        <img src="~/My/img/Logo.png" style="max-width: 30px;" />
+                    </a>
+                </div>
+                <div class="navbar-header">
+                    <h4 style="color: white; margin-left: 10px">E-Staff Portal</h4>
+
+                </div>
+
+                <div class="navbar-header">
+                    <h4 class="navbar-center" id="ScreenName" runat="server" style="color: white;"> @ViewData["Title"]</h4>
+                </div>
+            </nav>
+        </div>
+    </header>
+   
+        <div id="page-wrapper">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+ 
+
+
+    <script src="~/My//js/jquery.min.js"></script>
+    <script src="~/My/js/bootstrap.min.js"></script>
+    <script src="~/My/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="~/My/js/SideBar.min.js"></script>
+
+    <script>
+
+        $('.form_date').datetimepicker({
+            //language:  'fr',
+            //weekStart: 1,
+            format: "dd/mm/yyyy",
+            todayBtn: 1,
+            autoclose: 1,
+            pickerPosition: "bottom-left",
+            startView: 2,
+            maxView: 2,
+            minView: 2
+
+        });
+    </script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
